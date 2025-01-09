@@ -206,15 +206,13 @@
 .is-horizontal {
     align-items: center;
 }
+#faq,
 #main-container {
     padding: 0 32px;
     width: 100%;
 }
 .gone {
     display: none;
-}
-html {
-    overflow-y: hidden;
 }
 .hero {
     padding-bottom: 15px;

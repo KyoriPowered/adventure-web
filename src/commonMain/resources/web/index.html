@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/FAQPage">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A web interface for MiniMessage.">
+    <meta name="description" content="MiniMessage Viewer is a web interface to help generate and edit MiniMessage strings.">
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -11,7 +11,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#aa7bd0">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
-    <title>MiniMessageViewer</title>
+    <title>MiniMessage Viewer | Edit MiniMessage easily online</title>
     <!--suppress HtmlUnknownTarget --> <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
           integrity="sha256-UDtbUHqpVVfXmdJcQVU/bfDEr9xldf3Dbd0ShD0Uf/Y=" crossorigin="anonymous">
@@ -66,7 +66,7 @@
               </button>
               <div class="dropdown share-dropdown">
                 <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="share-dropdown-menu">
+                  <button class="button" aria-haspopup="true" aria-controls="share-dropdown-menu" aria-label="Share">
                     <span class="icon is-small">
                       <i class="fas fa-share-alt"></i>
                     </span>
@@ -127,7 +127,7 @@
               <div class="is-flex ml-auto">
                 <div class="dropdown">
                   <div class="dropdown-trigger swatch-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="palette-dropdown-menu">
+                    <button class="button" aria-haspopup="true" aria-controls="palette-dropdown-menu" aria-label="Color">
                       <span class="icon is-small">
                         <i class="fas fa-palette" aria-hidden="true"></i>
                       </span>
@@ -235,7 +235,7 @@
               <span class="icon"><i class="fas fa-exclamation-triangle"></i></span> Your connection with the server has been lost, please reload the page.
             </p>
             <div id="output-pane" class="is-flex is-flex-grow-1 is-flex-shrink-0">
-              <div id="chat-entry-box">_</div>
+              <div id="chat-entry-box" aria-hidden="true">_</div>
               <div id="server-list-icon">
                 <img id="server-list-image" src="img/kyori.png" alt="Example server icon">
               </div>
@@ -244,11 +244,84 @@
                   <span style="color: white;">KyoriCraft</span>
                   <span class="is-flex" style="color: #aaaaaa;margin-left: auto;">
                     0<span style="color: #555555;">/</span>20
-                    <img id="server-list-ping" src="img/ping.png">
+                    <img id="server-list-ping" src="img/ping.png" aria-hidden="true">
                   </span>
                 </div>
                 <pre id="output-pre" class="mc-font"></pre>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="faq" class="container content">
+        <h2>Frequently asked questions (FAQ) about MiniMessage Viewer</h2>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">What is MiniMessage Viewer?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              MiniMessage Viewer, also called Adventure WebUI, is a web interface for MiniMessage.
+              It allows you to easily create and preview MiniMessage text in various formats, such as chat messages, lore, holograms, and server list entries.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">What is MiniMessage?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              MiniMessage is a text format used by the Adventure library to represent rich text in a compact and human-readable way.
+              It is used in various Minecraft plugins and mods to display formatted text in chat messages, lore, holograms, and server list entries.
+              You can find our more about MiniMessage on the <a href="https://docs.advntr.dev/minimessage/format.html">official documentation</a>.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">Where do I find the source code for Adventure Webui/MiniMessage Viewer?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+               The source code for Adventure WebUI, also known as MiniMessage Viewer, can be found on <a href="https://github.com/KyoriPowered/adventure-webui">GitHub</a>.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">How do I use MiniMessage Editor/Viewer?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              To use MiniMessage Editor, simply enter your text in the input box in the middle of the screen.
+              You can use the buttons at the top select the format you want to preview the text in, such as chat, lore, hologram, or server list.
+              The output will be displayed below the input.
+              You can use the buttons above the input to format the text, such as making it bold, italic, or underlined.
+              You can also add clickable URLs, commands, and hover text.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">How do I share my generated MiniMessage text?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              To share your generated MiniMessage text, you can use the share buttons at the top of the screen.
+              You can share a short link or a full link to your MiniMessage text.
+              Short links expire after 6 months, so make sure to save the full link if you want to keep it for longer.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">How do I export my generated MiniMessage text to JSON?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              To export your generated MiniMessage text to JSON, click the <span class="icon is-small ml-1 mr-1"><i class="fas fa-file-export"></i></span> "Export to JSON" button at the top of the screen.
+              This will generate a JSON representation of your MiniMessage text that you can copy and paste into your plugin or mod.
+            </div>
+          </div>
+        </div>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="mb-4">
+          <h3 itemprop="name">How do I preview my MiniMessage text in-game?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              To preview your MiniMessage text in-game, click the <span class="icon is-small ml-1 mr-1"><i class="fas fa-gamepad"></i></span> "Try in-game" button at the top of the screen.
+              It will copy a Minecraft server ip to your clipboard that you can add to your server list in Minecraft to get an in-game preview of your MiniMessage text.
             </div>
           </div>
         </div>
