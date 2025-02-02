@@ -9,7 +9,7 @@ indra-git = { id = "net.kyori.indra.git", version = "3.1.3" }
 jib = { id = "com.google.cloud.tools.jib", version = "3.4.4" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
-spotless = { id = "com.diffplug.spotless", version = "6.25.0" }
+spotless = { id = "com.diffplug.spotless", version = "7.0.2" }
 
 [libraries]
 adventure-minimessage = { group = "net.kyori", name = "adventure-text-minimessage", version.ref = "adventure" }
