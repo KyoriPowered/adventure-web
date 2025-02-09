@@ -26,7 +26,7 @@ ktor-server-websockets = { group = "io.ktor", name = "ktor-server-websockets", v
 ktor-server-caching-headers = { group = "io.ktor", name = "ktor-server-caching-headers", version.ref = "ktor" }
 ktor-server-compression = { group = "io.ktor", name = "ktor-server-compression", version.ref = "ktor" }
 ktor-network = { group = "io.ktor", name = "ktor-network", version.ref = "ktor" }
-logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.15" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.16" }
 
 zKtlint = { group = "com.pinterest", name = "ktlint", version.ref = "ktlint"}
 
